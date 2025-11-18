@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  telegram_bot:
+    build: .
+    container_name: telegram_downloader_bot
+    restart: always
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - ./temp:/temp
